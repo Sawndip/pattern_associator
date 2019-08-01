@@ -1,5 +1,6 @@
 #include "./a_Pattern_Translator/trans.h"
 #include "./b_Pattern_Info_Loader/pat_info_loader.h"
+#include "./c_Process_Unit/process_unit.h"
 
 #define input_file "input.txt"
 #define weight_file "weight.txt"
@@ -28,5 +29,9 @@ int main(int argc, const char* argv[]){
     /* print data on DEBUG MODE*/
     if(DEBUG) _print_weight(dim_size, *pat.num_of_patterns, pat.weights);
     if(DEBUG) _print_threshold(*pat.num_of_patterns, pat.thresholds);
+
+    int* output_result = process_unit(input_pattern, dim_size, pat.weights, *pat.num_of_patterns, pat.thresholds);
+    if(DEBUG)output_print(output_result, *pat.num_of_patterns);
+
     return 0;
 }
