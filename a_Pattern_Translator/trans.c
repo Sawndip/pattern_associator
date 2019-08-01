@@ -29,6 +29,7 @@ int* input_to_bit_translation(const char* filename, int* len){
 
     return _encoding_to_bit(input_buff, _dim_row_size, _dim_size);
 }
+
 int* _encoding_to_bit(char* input_pattern, int _length, int _size){
     int* _encoded_pattern = (int*)malloc(sizeof(int)*_length*_length);
     int j = 0;
