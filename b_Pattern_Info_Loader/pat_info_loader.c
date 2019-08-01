@@ -81,15 +81,4 @@ void _print_threshold(int count, int* array){
         printf("%d / %d\n",i, array[i]);
     }
 }
-int main(int argc, const char** argv){
-    int dim_length = 5;
-    int dim_size = dim_length*dim_length;
 
-    Pattern_info pat;
-    pat.num_of_patterns = (int*)malloc(sizeof(int));
-    pat.weights = weight_load(weight_file, dim_size, pat.num_of_patterns);
-    pat.thresholds = threshold_load(threshold_file, *pat.num_of_patterns);
-    if(DEBUG) _print_weight(dim_size, *pat.num_of_patterns, pat.weights);
-    if(DEBUG) _print_threshold(*pat.num_of_patterns, pat.thresholds);
-    return 0;
-}

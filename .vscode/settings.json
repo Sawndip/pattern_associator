@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "pat_info_loader.h": "c"
+        "pat_info_loader.h": "c",
+        "trans.h": "c"
     }
 }
